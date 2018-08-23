@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
-import { AuthService } from '../../../core/auth.service';
+// import { AuthService } from '../../../core/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -25,9 +25,10 @@ export class ToolbarUserComponent implements OnInit {
   }
 
   constructor(private _elementRef: ElementRef,
-              private router: Router,
-              private auth: AuthService) {
-    this.currentUser = this.auth;
+              private router: Router) {
+                  // private router: Router,
+                  //   private auth: AuthService) {
+    // this.currentUser = this.auth;
   }
 
   ngOnInit() {
@@ -38,8 +39,8 @@ export class ToolbarUserComponent implements OnInit {
   }
 
   logout() {
-    this.auth.signOut().then(() => {
-      this.router.navigate(['/sigin']);
-    });
+    // this.auth.signOut().then(() => {
+    //   this.router.navigate(['/sigin']);
+    // });
   }
 }

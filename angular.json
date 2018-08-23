@@ -32,7 +32,7 @@
               { "input": "node_modules/quill/dist/quill.snow.css", "bundleName": "lib" },
               { "input": "node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss", "bundleName": "lib" },
               { "input": "node_modules/angular-bootstrap-md/scss/mdb-free.scss", "bundleName": "lib" },
-              { "input": "src/styles.scss", "bundleName": "stbui" }
+              { "input": "src/styles.scss", "bundleName": "igsui" }
             ],
             "scripts": []
           },

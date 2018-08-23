@@ -15,7 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SigninComponent } from './pages/signin/signin.component';
 
-import { FireBaseComponentsModule } from './shared/firebase.module';
+// import { FireBaseComponentsModule } from './shared/firebase.module';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -35,7 +35,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     CoreModule,
     AdminModule,
     AppRoutingModule,
-    FireBaseComponentsModule,
+    // FireBaseComponentsModule,
     ReactiveFormsModule,
     environment['ngsw'] ? ServiceWorkerModule.register('./ngsw-worker.js') : []
   ],

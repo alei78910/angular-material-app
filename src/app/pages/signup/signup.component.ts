@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../core/auth.service';
+// import { AuthService } from '../../core/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,31 +13,32 @@ export class SignupComponent implements OnInit {
   password: string;
   passwordConfirm: string;
 
-  constructor(private router: Router, private auth: AuthService) {}
+  constructor(private router: Router) {}
+  // constructor(private router: Router, private auth: AuthService) {}
 
   ngOnInit() {}
 
   signUpWithEmail() {
     console.log(this.email, this.password);
-    this.auth
-      .emailSignUp(this.email, this.password)
-      .then(() => this.afterSignIn());
+    // this.auth
+    //   .emailSignUp(this.email, this.password)
+    //   .then(() => this.afterSignIn());
   }
 
   signInWithGoogle() {
-    this.auth.googleLogin().then(() => this.afterSignIn());
+    // this.auth.googleLogin().then(() => this.afterSignIn());
   }
 
   signInWithGithub() {
-    this.auth.githubLogin().then(() => this.afterSignIn());
+    // this.auth.githubLogin().then(() => this.afterSignIn());
   }
 
   signInAnonymously() {
-    this.auth.anonymousLogin().then(() => this.afterSignIn());
+    // this.auth.anonymousLogin().then(() => this.afterSignIn());
   }
 
   register() {
-    this.signUpWithEmail();
+    // this.signUpWithEmail();
   }
 
   private afterSignIn() {

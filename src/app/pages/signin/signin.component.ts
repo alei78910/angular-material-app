@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../core/auth.service';
+// import { AuthService } from '../../core/auth.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -29,8 +29,8 @@ export class SigninComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private fb: FormBuilder,
-    private auth: AuthService
+    private fb: FormBuilder
+    // private auth: AuthService
   ) {}
 
   ngOnInit() {
@@ -76,21 +76,21 @@ export class SigninComponent implements OnInit {
   }
 
   signInWithGoogle() {
-    this.auth.googleLogin().then(() => this.afterSignIn());
+    // this.auth.googleLogin().then(() => this.afterSignIn());
   }
 
   signInWithGithub() {
-    this.auth.githubLogin().then(() => this.afterSignIn());
+    // this.auth.githubLogin().then(() => this.afterSignIn());
   }
 
   signInWithEmail() {
-    this.auth
-      .emailLogin(this.userForm.value['email'], this.userForm.value['password'])
-      .catch(error => console.log('邮箱登录出错：', error));
+    // this.auth
+    //   .emailLogin(this.userForm.value['email'], this.userForm.value['password'])
+    //   .catch(error => console.log('邮箱登录出错：', error));
   }
 
   signInAnonymously() {
-    this.auth.anonymousLogin().then(() => this.afterSignIn());
+    // this.auth.anonymousLogin().then(() => this.afterSignIn());
   }
 
   login() {
