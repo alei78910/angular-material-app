@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialComponentsModule } from './material.module';
-
+import {TranslateModule} from '@ngx-translate/core';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +15,7 @@ import { MaterialComponentsModule } from './material.module';
     CommonModule,
     FormsModule,
     FlexLayoutModule,
+    TranslateModule,
     MaterialComponentsModule
   ]
 })

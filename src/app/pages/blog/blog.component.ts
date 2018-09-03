@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from './blog.service';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -9,7 +9,10 @@ import { BlogService } from './blog.service';
 export class BlogComponent implements OnInit {
   items: any = [];
 
-  constructor(private service: BlogService) {}
+  constructor(translate: TranslateService, private service: BlogService) {
+    let lan = translate.getDefaultLang()
+    let lan2 = translate.getLangs();
+  }
 
   ngOnInit() {
     this.service.getIssues().subscribe(items => {
