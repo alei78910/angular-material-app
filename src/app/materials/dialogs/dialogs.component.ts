@@ -12,25 +12,46 @@ export class DialogsComponent implements OnInit {
   ngOnInit() {}
 
   openDialog() {
-    this.dialog.open(DialogsComponent, {
-      width: '400px'
+    const dialogRef = this.dialog.open(DialogsComponent, {
+      // width: '100px',
+      // height: '100px'
+      width: '80%',
+      height: '80%'
+    });
+    dialogRef.afterClosed().subscribe((result)=>{
+      console.log(`confirm:${result}`);
+      if(result){
+
+      }
     });
   }
 
   openAlert() {
-    this.dialog.alert({
+    const dialogRef = this.dialog.alert({
       title: 'title',
       message: 'message',
       closeButton: '确定'
     });
+    dialogRef.afterClosed().subscribe((result)=>{
+      console.log(`confirm:${result}`);
+      if(result){
+
+      }
+    });
   }
 
   openConfirm() {
-    this.dialog.confirm({
+    const dialogRef = this.dialog.confirm({
       title: 'title',
       message: 'message',
       cancelButton: '取消',
       acceptButton: '确定'
+    });
+    dialogRef.afterClosed().subscribe((result)=>{
+      console.log(`confirm:${result}`);
+      if(result){
+
+      }
     });
   }
 }

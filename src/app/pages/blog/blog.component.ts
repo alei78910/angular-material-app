@@ -10,8 +10,8 @@ export class BlogComponent implements OnInit {
   items: any = [];
 
   constructor(translate: TranslateService, private service: BlogService) {
-    let lan = translate.getDefaultLang()
-    let lan2 = translate.getLangs();
+    // let lan = translate.currentLang
+    // .defaultLang
   }
 
   ngOnInit() {
